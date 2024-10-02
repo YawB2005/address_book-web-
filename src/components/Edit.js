@@ -2,15 +2,14 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import { db } from '../firebase';
-import MyForm from './my_form'; // Assuming this is your form component
+import MyForm from './my_form'; 
 
 const Edit = () => {
     const { id } = useParams(); // Get the document ID from the URL params
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
     const navigate = useNavigate();
-
-    // Fetch the contact data by ID from Firestore when the component mounts
+    
     useEffect(() => {
         const fetchContact = async () => {
             if (id) {
@@ -34,11 +33,10 @@ const Edit = () => {
         fetchContact();
     }, [id]);
 
-    // Handle form submission and update Firestore
     const handleEdit = async (e) => {
         e.preventDefault();
 
-        const contactDocRef = doc(db, 'contacts', id); // Get reference to the specific document
+        const contactDocRef = doc(db, 'contacts', id); 
 
         try {
             await updateDoc(contactDocRef, {
@@ -46,7 +44,7 @@ const Edit = () => {
                 phone: phone,
             });
             console.log("Contact updated successfully");
-            navigate('/home'); // Redirect after successful update
+            navigate('/home'); 
         } catch (error) {
             console.log("Error updating contact:", error);
         }
@@ -54,12 +52,12 @@ const Edit = () => {
 
     return ( 
         <MyForm 
-            submit={handleEdit} // Submit function
-            name={name} // Pre-filled name
-            setName={(e) => setName(e.target.value)} // Update name
-            phone={phone} // Pre-filled phone
-            setPhone={(e) => setPhone(e.target.value)} // Update phone
-            topic="Edit contact here" // Form title or topic
+            submit={handleEdit} 
+            name={name} 
+            setName={(e) => setName(e.target.value)} 
+            phone={phone} 
+            setPhone={(e) => setPhone(e.target.value)} 
+            topic="Edit contact here" 
         />
     );
 }
