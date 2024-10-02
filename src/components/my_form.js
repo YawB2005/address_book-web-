@@ -1,4 +1,5 @@
-
+// A form prop
+// This prop will be used by the edit contact page and the add contact page
 const MyForm = ({topic, submit, name, setName, phone, setPhone, e}) => {
     return (         <div className="flex items-center justify-center min-h-screen">
         <form 

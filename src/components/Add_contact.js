@@ -9,9 +9,11 @@ const Add = () => {
     const user = auth.currentUser;
     const navigate = useNavigate()
 
+    //Add contact funciton
     const addContact = async (e) => {
         e.preventDefault();
         if (user) {
+            // Adding contact to database
             try {
                 await addDoc(collection(db, "contacts"),  {
                     name: name,
@@ -21,6 +23,7 @@ const Add = () => {
                 console.log("Contact added succesfully");
                 navigate("/home");
             }catch(error) {
+                // Show error if there is one
                 console.log("Cannot add contact");
             }
         } 

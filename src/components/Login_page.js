@@ -10,9 +10,11 @@ const Login = () => {
     const [isLogin, setIsLogin] = useState(true)
     const navigate = useNavigate();
 
+    //Function for creating the contact
     const CreateAccount = async (e) => {
         e.preventDefault();
         try {
+          //Creating account here using the built-in firebase function createUserWithEmailAndPassword
             const userData = await createUserWithEmailAndPassword(auth, email, password);
             setUser(userData.user)
             navigate('/home');
@@ -21,10 +23,11 @@ const Login = () => {
         }
     }
 
-
+    //Function for handling the logging in of the contact
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
+          //Signing in here using the built-in firebase function signInWithEmailAndPassword
             const userData = await signInWithEmailAndPassword(auth, email, password);
             setUser(userData.user);
             navigate('/home');

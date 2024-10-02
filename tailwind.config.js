@@ -1,3 +1,5 @@
+//Tailwind css configuration file
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
