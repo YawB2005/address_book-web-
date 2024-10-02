@@ -66,7 +66,7 @@ const Contacts = () => {
                         </button>
                     </Link>
                     <button onClick={() => SignOut()} className="bg-red-200 text-white mx-4 my-3 px-3 py-1 rounded-lg hover:bg-indigo-700">
-                            Sign Out
+                            Log Out
                     </button>
                 </div>
                 <div className="bg-white shadow-md rounded-lg overflow-hidden">
