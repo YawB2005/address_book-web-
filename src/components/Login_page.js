@@ -31,7 +31,7 @@ const Login = () => {
             const userData = await signInWithEmailAndPassword(auth, email, password);
             setUser(userData.user);
             navigate('/home');
-            console.log("User is signed in");
+            alert("Welcomeee")
         } catch (error) {
             console.error('Error signing up:', error)
         }

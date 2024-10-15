@@ -1,0 +1,38 @@
+[debug] [2024-10-15T20:58:22.107Z] ----------------------------------------------------------------------
+[debug] [2024-10-15T20:58:22.111Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Barimah  Yaw\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2024-10-15T20:58:22.111Z] CLI Version:   13.22.0
+[debug] [2024-10-15T20:58:22.111Z] Platform:      win32
+[debug] [2024-10-15T20:58:22.111Z] Node Version:  v20.11.0
+[debug] [2024-10-15T20:58:22.111Z] Time:          Tue Oct 15 2024 20:58:22 GMT+0000 (Greenwich Mean Time)
+[debug] [2024-10-15T20:58:22.112Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=701932449&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2024-10-15T21:00:35.254Z] >>> [apiv2][query] POST https://accounts.google.com/o/oauth2/token [none]
+[debug] [2024-10-15T21:00:35.255Z] >>> [apiv2][body] POST https://accounts.google.com/o/oauth2/token [omitted]
+[debug] [2024-10-15T21:00:35.590Z] *** [apiv2] error from fetch(https://accounts.google.com/o/oauth2/token, {"headers":{},"method":"POST","body":{"_overheadLength":543,"_valueLength":208,"_valuesToMeasure":[],"writable":false,"readable":true,"dataSize":0,"maxDataSize":2097152,"pauseStreams":true,"_released":true,"_streams":[],"_currentStream":null,"_insideLoop":false,"_pendingNext":false,"_boundary":"--------------------------780564538131716993790386","_events":{},"_eventsCount":1}}): FetchError: request to https://accounts.google.com/o/oauth2/token failed, reason: 
+[debug] [2024-10-15T21:00:35.591Z] Token Fetch Error: FirebaseError: Failed to make request to https://accounts.google.com/o/oauth2/token
+    at RetryOperation._fn (C:\Users\Barimah  Yaw\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:261:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[debug] [2024-10-15T21:00:35.605Z] >>> [apiv2][query] POST https://auth.firebase.tools/attest [none]
+[debug] [2024-10-15T21:00:35.606Z] >>> [apiv2][body] POST https://auth.firebase.tools/attest {"session_id":"c4add240-9c51-4e02-a44a-a0af51055d70"}
+[debug] [2024-10-15T21:00:37.259Z] <<< [apiv2][status] POST https://auth.firebase.tools/attest 200
+[debug] [2024-10-15T21:00:37.259Z] <<< [apiv2][body] POST https://auth.firebase.tools/attest {"token":"tFxN6Vl8OyXUhoOmBVX9bRROIY2v2l8-XCHyj0M-XwQ"}
+[info] 
+[info] To sign in to the Firebase CLI:
+[info] 
+[info] 1. Take note of your session ID:
+[info] 
+[info]    C4ADD
+[info] 
+[info] 2. Visit the URL below on any device and follow the instructions to get your code:
+[info] 
+[info]    https://auth.firebase.tools/login?code_challenge=vMkyxa5bopuDplO5n37yCFtsyHC8xHAM0aXa3MsZ9lk&session=c4add240-9c51-4e02-a44a-a0af51055d70&attest=tFxN6Vl8OyXUhoOmBVX9bRROIY2v2l8-XCHyj0M-XwQ
+[info] 
+[info] 3. Paste or enter the authorization code below once you have it:
+[info] 

@@ -43,7 +43,7 @@ const Edit = () => {
                 name: name,
                 phone: phone,
             });
-            console.log("Contact updated successfully");
+            alert("Contact updated successfully");
             navigate('/home'); 
         } catch (error) {
             console.log("Error updating contact:", error);

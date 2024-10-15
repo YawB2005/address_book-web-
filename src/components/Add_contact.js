@@ -20,8 +20,8 @@ const Add = () => {
                     phone: phone,
                     userId: user.uid,
                 });
-                console.log("Contact added succesfully");
                 navigate("/home");
+                alert("Contact added successfully")
             }catch(error) {
                 // Show error if there is one
                 console.log("Cannot add contact");

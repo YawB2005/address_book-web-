@@ -73,9 +73,7 @@ const Contacts = () => {
                     {contacts.length > 0 ? (
                         contacts.map((contact) => (
                             <div key={contact.id} className="p-4 border-b last:border-none flex items-center">
-                                <div className="w-12 h-12 bg-indigo-500 text-white rounded-full flex justify-center items-center text-xl font-semibold mr-4">
-                                    {contact.name.charAt(0)}
-                                </div>
+
                                 <div className="flex-grow">
                                     <h2 className="text-lg font-semibold text-gray-700">
                                         {contact.name}
