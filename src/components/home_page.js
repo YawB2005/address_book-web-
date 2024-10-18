@@ -61,7 +61,7 @@ const Contacts = () => {
                         Welcome to your address book
                     </h1>
                     <Link to="/add">
-                        <button className="bg-indigo-600 text-white mx-4 my-3 px-3 py-1 rounded-lg hover:bg-indigo-700">
+                        <button className="bg-blue-600 text-white mx-4 my-3 px-3 py-1 rounded-lg hover:bg-indigo-700">
                             Add contact
                         </button>
                     </Link>
